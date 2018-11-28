@@ -81,8 +81,24 @@ function draw() {
   if (frameCount == 180)
     pop();
 
-  //linea intermitente
 
+    stroke(255,120)
+    line(100,100,volume,volume)
+    line(150,150,volume,volume)
+    line(volume,volume,200,200)
+    line(250,250,volume,volume)
+
+    //texto
+    pop()
+      noStroke()
+      textFont('ROBOTO')
+      textStyle('BOLD')
+      fill(255,120)
+      textSize(20)
+      textAlign(CENTER)
+      text('Smoking is mandatory to be a Peaky Blinder',windowWidth/2,windowHeight/1.2)
+  push()
+  //linea intermitente
   pop()
   for (var i = 1; i < num; i++) {
     ax[i - 1] = ax[i];
